@@ -1,27 +1,29 @@
 import React, { useContext } from 'react'
-import { TaskListContext } from '../context/TaskListContext'
+import { TaskListContext } from '../../../context/TaskListContext'
+
+import * as S from './styles'
 
 const Task = ({ task }) => {
   const { removeTask, findItem } = useContext(TaskListContext)
 
   return (
-    <li className='list-item'>
+    <S.ListItem>
       <span>{task.title}</span>
       <div>
-        <button
+        <S.Button
           onClick={() => removeTask(task.id)}
           className='btn-delete task-btn'
         >
           <i className='fas fa-trash-alt' />
-        </button>
-        <button
+        </S.Button>
+        <S.Button
           onClick={() => findItem(task.id)}
           className='btn-edit task-btn'
         >
           <i className='fas fa-pen' />
-        </button>
+        </S.Button>
       </div>
-    </li>
+    </S.ListItem>
   )
 }
 

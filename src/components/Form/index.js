@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { TaskListContext } from '../context/TaskListContext'
+import { TaskListContext } from '../../context/TaskListContext'
 
-const TaskForm = () => {
+import * as S from './styles'
+
+const Form = () => {
   const { addTask, clearList, editItem, editTask } = useContext(TaskListContext)
 
   const [title, setTitle] = useState('')
@@ -34,24 +36,23 @@ const TaskForm = () => {
   }, [editItem])
 
   return (
-    <form className='form'>
-      <input
+    <S.Form>
+      <S.Input
         onChange={handleChange}
         value={title}
         type='text'
-        className='task-input'
         placeholder='Add Task...'
       />
-      <div className='buttons'>
-        <button onClick={handleSubmit} className='btn add-task-btn'>
+      <S.FlexContainer>
+        <S.AddButton onClick={handleSubmit}>
           {editItem ? 'Edit Task' : 'Add Task'}
-        </button>
-        <button onClick={handleClearList} className='btn clear-btn'>
+        </S.AddButton>
+        <S.ClearButton onClick={handleClearList}>
           Clear
-        </button>
-      </div>
-    </form>
+        </S.ClearButton>
+      </S.FlexContainer>
+    </S.Form>
   )
 }
 
-export default TaskForm
+export default Form

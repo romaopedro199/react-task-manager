@@ -1,22 +1,24 @@
 import React, { useContext } from 'react'
-import { TaskListContext } from '../context/TaskListContext'
+import { TaskListContext } from '../../context/TaskListContext'
 import Task from './Task'
+
+import * as S from './styles'
 
 const TaskList = () => {
   const { tasks } = useContext(TaskListContext)
 
   return (
-    <div>
+    <>
       {tasks.length ? (
-        <ul className='list'>
+        <S.List>
           {tasks.map(task => {
             return <Task key={task.id} task={task} />
           })}
-        </ul>
+        </S.List>
       ) : (
-        <div className='no-tasks'>No Tasks</div>
+        <S.NoTasks>No Tasks</S.NoTasks>
       )}
-    </div>
+    </>
   )
 }
 
