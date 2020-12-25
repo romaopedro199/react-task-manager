@@ -1,59 +1,62 @@
 import styled from 'styled-components'
 
 export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    width: 300px;
+  }
 `
 
 export const Input = styled.input`
-  width: 350px;
-  min-width: 250px;
-  padding: 15px 10px 10px 20px;
-  margin-right: 10px;
-  font-family: 'Josefin Sans', serif;
-  font-size: 15px;
-  color: #ccc;
-  background-color: #1d222b;
-  border: 1px solid #444;
-  outline: none;
-  border-radius: 20px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #7287A4;
+  border: 1px solid #7287A4;
+  border-radius: 5px;
+  padding: 10px 10px 8px 10px;
+  color: rgba(255, 255, 255, .5);
+  width: 100%;
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, .5);
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
 `
 
 export const FlexContainer = styled.div`
+  margin-top: 10px;
   display: flex;
 `
 
 export const Button = styled.button`
-  margin: 10px;
+  border-radius: 5px;
+  padding: 10px 15px 8px 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
 `
 
 export const AddButton = styled(Button)`
-  min-width: 100px;
-  background-color: #790e43;
-  color: #ccc;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  outline: none;
-  cursor: pointer;
+  background-color: #D9727F;
+  border: 1px solid #D9727F;
+  color: #FFFFFF;
+  margin-right: 10px;
 `
 
 export const ClearButton = styled(Button)`
-  width: 100px;
-  height: 35px;
-  background-color: #790e43;
-  color: #ccc;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  outline: none;
-  cursor: pointer;
+  background-color: #FCBB6D;
+  border: 1px solid #FCBB6D;
+  color: #465C7A;
 `

@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
+export const Header = styled.div`
+  padding: 40px 15px;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+  }
+`
+
 export const Title = styled.h1`
-  color: #ccc;
-  font-weight: 300;
-  text-align: center;
-  margin: 50px 20px 60px 20px;
-  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FCBB6D;
 `

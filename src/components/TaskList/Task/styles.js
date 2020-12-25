@@ -2,24 +2,33 @@ import styled from 'styled-components'
 
 export const ListItem = styled.li`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
-  padding-bottom: 5px;
+  padding: 10px 10px 10px 15px;
+  margin: 10px 0px;
+
+  background-color: #324055;
+  border-radius: 5px;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    width: 300px;
+  }
 
   span {
-    color: #999;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
   }
 `
 
 export const Button = styled.button`
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
+  background-color: #FCBB6D;
+  border: 1px solid #FCBB6D;
+  border-radius: 2px;
+  padding: 5px 8px;
+  margin: 5px;
 
   i {
-    font-size: 16px;
-    color: #bbb;
-    margin-right: 20px;
+    color: #324055;
   }
 `

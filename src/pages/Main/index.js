@@ -11,15 +11,15 @@ const Main = () => {
   return (
     <TaskListContextProvider>
       <GlobalStyles />
-      <S.Container>
-        <S.AppWrapper>
+      <S.Wrapper>
+        <S.Container>
           <Header />
           <S.Main>
             <Form />
             <TaskList />
           </S.Main>
-        </S.AppWrapper>
-      </S.Container>
+        </S.Container>
+      </S.Wrapper>
     </TaskListContextProvider>
   )
 }

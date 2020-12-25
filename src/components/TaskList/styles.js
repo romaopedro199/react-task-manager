@@ -1,16 +1,11 @@
 import styled from 'styled-components'
 
 export const List = styled.ul`
-  width: 90%;
-  margin: auto;
-  max-height: 300px;
-  overflow: hidden;
-  overflow-y: auto;
+  padding: 20px 0px;
 `
 
 export const NoTasks = styled.div`
-  color: #777;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
+  padding: 30px 0px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .5);
 `
